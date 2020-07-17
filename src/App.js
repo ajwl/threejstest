@@ -1,24 +1,26 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, {useEffect, useRef} from 'react';
+// import * as THREE from "three"
+import {makeThreeBits} from './threebits.js';
 import './App.css';
+// import logo from './logo.svg';
+
 
 function App() {
+
+  const canvasHolder = useRef();
+
+  useEffect(() => {
+    makeThreeBits(canvasHolder.current);
+  });
+  
+
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        A rotating item
       </header>
+      <div ref={canvasHolder}></div>
+      <img src="public/logo512.png"></img>
     </div>
   );
 }
