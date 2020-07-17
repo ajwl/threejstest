@@ -252,6 +252,9 @@
       }
    ],
    "asset" : {
+      "extras" : {
+         "GOOGLE_processor_version" : 294144208
+      },
       "generator" : "Obj2GltfConverter",
       "version" : "2.0"
    },
@@ -291,9 +294,45 @@
       {
          "byteLength" : 2015312,
          "name" : "buffer-0",
-         "uri" : "donut.bin"
+         "uri" : "Donut obj.bin"
       }
    ],
+   "cameras" : [
+      {
+         "perspective" : {
+            "yfov" : 0.7853981633974483,
+            "znear" : 0.1000000014901161
+         },
+         "type" : "perspective"
+      }
+   ],
+   "extensions" : {
+      "KHR_lights_punctual" : {
+         "lights" : [
+            {
+               "color" : [ 1, 0.9333333333333333, 0.8666666666666667 ],
+               "intensity" : 0.25,
+               "name" : "headLight",
+               "type" : "directional"
+            },
+            {
+               "color" : [ 1, 0.9333333333333333, 0.8666666666666667 ],
+               "intensity" : 0.324999988079071,
+               "name" : "keyLight",
+               "type" : "directional"
+            }
+         ]
+      }
+   },
+   "extensionsUsed" : [ "GOOGLE_backgrounds", "GOOGLE_camera_settings", "KHR_lights_punctual" ],
+   "extras" : {
+      "GOOGLE_initial_camera_motion" : {
+         "motionPath" : "FULL_ROTATION"
+      },
+      "GOOGLE_lighting_rig" : {
+         "disableShadows" : false
+      }
+   },
    "materials" : [
       {
          "alphaMode" : "OPAQUE",
@@ -407,12 +446,87 @@
       {
          "mesh" : 0,
          "name" : "node-0"
+      },
+      {
+         "children" : [ 2 ]
+      },
+      {
+         "children" : [ 3 ],
+         "extras" : {
+            "isTransformNode" : 1
+         },
+         "translation" : [ 2418.086813169352, 221.6835878638687, -1458.202533810119 ]
+      },
+      {
+         "children" : [ 0 ],
+         "translation" : [ -2418.086813169352, -221.6835878638687, 1458.202533810119 ]
+      },
+      {
+         "camera" : 0,
+         "children" : [ 5 ],
+         "rotation" : [
+            -0.3060498322667207,
+            -0.2882167602630721,
+            -0.09778642652892069,
+            0.9020545515985577
+         ],
+         "translation" : [ 1347.035456582425, 1638.105274807231, 46.70444949684293 ]
+      },
+      {
+         "extensions" : {
+            "KHR_lights_punctual" : {
+               "light" : 0
+            }
+         },
+         "extras" : {
+            "isHeadLight" : 1
+         },
+         "name" : "headLightNode",
+         "translation" : [ -799.7929135540135, 399.8964567770067, 399.8964567770067 ]
+      },
+      {
+         "extensions" : {
+            "KHR_lights_punctual" : {
+               "light" : 1
+            }
+         },
+         "extras" : {
+            "isKeyLight" : 1
+         },
+         "name" : "keyLightNode",
+         "rotation" : [ -0.7505326882858236, -0.3752663441429118, 0, 0.5439447166468927 ],
+         "scale" : [ 0, 0, 807.7908426895536 ],
+         "translation" : [ 1606.08115186649, 2009.86782749676, -2246.431408318881 ]
       }
    ],
+   "scene" : 0,
    "scenes" : [
       {
+         "extensions" : {
+            "GOOGLE_backgrounds" : {
+               "color" : [ 0.403921568627451, 0.2274509803921569, 0.7176470588235294 ]
+            },
+            "GOOGLE_camera_settings" : {}
+         },
+         "extras" : {
+            "GOOGLE_camera_index" : {
+               "cameraIndex" : 0,
+               "nodeIndex" : 4
+            },
+            "GOOGLE_geometry_data" : {
+               "stats" : {
+                  "centroid" : [ 2413.871994556044, 394.2861421176531, -1438.640565629328 ],
+                  "radius" : 799.7929135540135,
+                  "stdev" : 482.5993636786631
+               },
+               "visualCenterPoint" : [ 2418.086813169352, 221.6835878638687, -1458.202533810119 ]
+            },
+            "GOOGLE_hemi_light" : {
+               "groundColor" : [ 0.403921568627451, 0.2274509803921569, 0.7176470588235294 ]
+            }
+         },
          "name" : "scene-0",
-         "nodes" : [ 0 ]
+         "nodes" : [ 1, 4, 6 ]
       }
    ]
 }

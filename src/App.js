@@ -19,8 +19,8 @@ function App() {
       <header className="App-header">
         A rotating item
       </header>
-      <div ref={canvasHolder}></div>
-      <img src="public/logo512.png"></img>
+      <div className="marker"></div>
+      <div className="box" ref={canvasHolder}></div>
     </div>
   );
 }
